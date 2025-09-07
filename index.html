@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Калькулятор дохода</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h2>Калькулятор сложного процента</h2>
+  <label for="initialAmount">Начальная сумма (₽):</label>
+  <input type="number" id="initialAmount" step="0.01" value="0" />
+
+  
+
+  <label for="dailyRate">Процентная ставка в 
+    <select id="ratePeriod">
+      <option value="day" selected>В день</option>
+      <option value="month">В месяц</option>
+      <option value="year">В год</option>
+    </select>
+   (%):</label>
+  <input type="number" id="dailyRate" step="0.01" value="0" />
+
+  <label for="period">Период:</label>
+  <select id="period">
+    <option value="1">1 день</option>
+    <option value="7" selected>7 дней</option>
+    <option value="30">30 дней</option>
+    <option value="60">60 дней</option>
+    <option value="90">90 дней</option>
+    <option value="180">180 дней</option>
+  </select>
+
+  <button onclick="calculate()">Рассчитать</button>
+
+  <div id="result"></div>
+
+  <canvas id="incomeChart" width="700" height="350"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

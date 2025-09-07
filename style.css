@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: linear-gradient(135deg, #001f4d, #003366);
+  color: #e0e7ff;
+  margin: 0;
+  padding: 30px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+}
+h2 {
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #63b3ed;
+}
+label {
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 500;
+}
+input[type="number"], select {
+  width: 200px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background-color: #0a2a66;
+  color: #cbd5e1;
+  box-shadow: inset 0 0 6px #114488;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+input[type="number"]:focus, select:focus {
+  background-color: #114488;
+  color: #f0f9ff;
+}
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #002244;
+  background: #63b3ed;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px #3b82f6;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  background: #4a90e2;
+  transform: scale(1.05);
+  color: #eef6ff;
+}
+table {
+  margin-top: 30px;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 700px;
+  box-shadow: 0 0 20px rgba(0, 64, 128, 0.5);
+  background-color: #022c66;
+  color: #e0e7ff;
+  font-size: 14px;
+  user-select: text;
+}
+th, td {
+  padding: 14px 20px;
+  text-align: center;
+  border-bottom: 1px solid #033d99;
+}
+th {
+  background: #0059b3;
+  border-right: 2px solid #033d99;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-shadow: 0 0 4px rgba(0, 91, 182, 0.8);
+}
+th:nth-child(4){
+  border: none;
+}
+tr:last-child td {
+  font-weight: 700;
+  font-size: 16px;
+  border-top: 2px solid #3399ff;
+  background-color: #00428a;
+}
+#incomeChart {
+  margin-top: 40px;
+  max-width: 700px;
+  box-shadow: 0 0 25px rgba(99, 179, 237, 0.6);
+  border-radius: 12px;
+  background: #022c66;
+  padding: 15px;
+}
