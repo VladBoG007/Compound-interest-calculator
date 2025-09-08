@@ -40,5 +40,18 @@
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="main.js"></script>
+
+  <hr>
+  <h2>Процент прибыли</h2>
+
+  <label for="profit">Прибыль (₽):</label>
+  <input type="number" id="profit" step="0.01" value="0" />
+
+  <label for="initialSum">Начальная сумма (₽):</label>
+  <input type="number" id="initialSum" step="0.01" value="0" />
+
+  <button onclick="calculateProfitPercent()">Рассчитать</button>
+
+  <div id="profitResult"></div>
 </body>
 </html>

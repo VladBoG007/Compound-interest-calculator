@@ -14,15 +14,14 @@ function calculate() {
     days.push(day);
     startAmounts.push(currentAmount);
 
-    // Рассчёт дохода с учётом выбранного периода начисления процентов
     let income = 0;
     if (ratePeriod === 'day') {
       income = currentAmount * dailyRatePercent / 100;
     } else if (ratePeriod === 'month') {
-      const monthlyRate = dailyRatePercent / 30; // приблизительно делим на 30 дней
+      const monthlyRate = dailyRatePercent / 30;
       income = currentAmount * monthlyRate / 100;
     } else if (ratePeriod === 'year') {
-      const yearlyRate = dailyRatePercent / 365; // приблизительно делим на 365 дней
+      const yearlyRate = dailyRatePercent / 365;
       income = currentAmount * yearlyRate / 100;
     }
 
@@ -31,7 +30,6 @@ function calculate() {
     endAmounts.push(currentAmount);
   }
 
-  // Формируем таблицу
   let tableHTML = `<table>
     <tr>
       <th>№ дня</th>
@@ -58,7 +56,6 @@ function calculate() {
 
   document.getElementById('result').innerHTML = tableHTML;
 
-  // Строим график с помощью Chart.js
   const ctx = document.getElementById('incomeChart').getContext('2d');
   if(window.incomeChartInstance) {
     window.incomeChartInstance.destroy();
@@ -104,4 +101,16 @@ function calculate() {
       }
     }
   });
+}
+
+function calculateProfitPercent() {
+  const profit = parseFloat(document.getElementById('profit').value);
+  const initialSum = parseFloat(document.getElementById('initialSum').value);
+
+  if (initialSum === 0) {
+    document.getElementById('profitResult').textContent = 'Начальная сумма не может быть 0';
+    return;
+  }
+  const percentProfit = (profit / initialSum) * 100;
+  document.getElementById('profitResult').textContent = percentProfit.toFixed(2) + '%';
 }

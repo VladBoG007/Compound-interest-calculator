@@ -99,3 +99,12 @@ tr:last-child td {
   background: #022c66;
   padding: 15px;
 }
+hr{
+  margin: 40px 0; 
+  border-color: #114488;
+}
+#profitResult{
+  margin-top: 15px;
+  font-size: 18px; 
+  font-weight: 600;
+}
